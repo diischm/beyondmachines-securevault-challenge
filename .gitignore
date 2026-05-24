@@ -1,1 +1,15 @@
 *.png
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.local
+!1.png
+!2.png
+!3.png
+!4.png
+!5.png
+!6.png
