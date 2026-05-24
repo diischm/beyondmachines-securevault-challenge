@@ -139,16 +139,16 @@ app.config.update( # more security options for preventing cookie forgery
 )  
 ```
 
-HTTPONLY  
+`HTTPONLY`
 JavaScript can't read the cookie (blocks XSS-based cookie stealing)  
 
-SAMESITE=Lax  
+`SAMESITE=Lax`  
 cookie isn't sent on cross-site requests
   
-  SECURE  
+  `SECURE`  
   should be True on HTTPS production. False for HTTP localhost development
   
-  LIFETIME=30 minutes  
+  `LIFETIME=30 minutes`  
   original cookie lasted 31 days, stolen cookies were valid for a month
   
   
@@ -492,13 +492,15 @@ The fix splits the template (fixed hardcoded text with `{{ query }}` placeholder
 ## What I've learned
 
 1. Learned how Burp Suite works and what it does, very fun to use.
-2. Used flask-unsign that is specifically made for Flask session cookies
-3. Learned how Flask cookies work and their structure
-4. Learned how HMAC works
-5. Learned that Flask cookies are signed, not encrypted. Kept confusing the two.
-6. Researched more about hash functions. Hash functions need to be slow for passwords. MD5 and SHA-256 are fast, great for checksums, horrible for passwords. The slower, the better.
-7. Even though I have general knowledge of Python, I learned where Python can be tricky for security reasons.
-8. Learned about environement variables and how useful they can be for secret keys.
-9. Learned about bcrypt and how to use it in Python.
-10. f-strings can be dangerous to use because of code injection, learned that correct Jinja2 template usage is very important
-11. Learned about cookie hardening.
+2. Learned how Flask works
+3. Used flask-unsign that is specifically made for Flask session cookies
+4. Learned how Flask cookies work and their structure
+5. Learned how HMAC works
+6. Learned that Flask cookies are signed, not encrypted. Kept confusing the two.
+7. Researched more about hash functions. Hash functions need to be slow for passwords. MD5 and SHA-256 are fast, great for checksums, horrible for passwords. The slower, the better.
+8. Even though I have general knowledge of Python, I learned where Python can be tricky for security reasons.
+9. Learned about environement variables and how useful they can be for secret keys.
+10. Learned about bcrypt and how to use it in Python.
+11. f-strings can be dangerous to use because of code injection, learned that correct Jinja2 template usage is very important
+12. Learned about cookie hardening.
+13. Greatly improved my Python syntax
